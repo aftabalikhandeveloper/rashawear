@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from "next/image";
 import { Globe, Mail, MessageCircle, Tv } from 'lucide-react';
 
 const FOOTER_LINKS = {
@@ -31,11 +32,17 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">R</span>
-              </div>
-              <span className="text-xl font-bold tracking-tight">Rashawear</span>
+             <Link href="/" className="flex items-center gap-2">
+              <Image
+                src="/rashawear_logo_svg.svg"
+                alt="Rashawear Logo"
+                width={200}
+                height={50}
+                // in mobile i want a litte gap from top
+
+                className="rounded-full sm:pt-2"
+              />
+             
             </Link>
             <p className="text-sm text-gray-500 mb-6 max-w-xs">
               Premium fashion for everyone. Quality clothing that speaks your style.
