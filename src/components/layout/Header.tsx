@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from "next/image";
+
 import { ShoppingBag, Search, Menu, X, Heart } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import CartSidebar from '@/components/ui/CartSidebar';
@@ -33,10 +35,16 @@ export default function Header() {
             </button>
 
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">R</span>
-              </div>
-              <span className="text-xl font-bold tracking-tight hidden sm:block">Rashawear</span>
+              <Image
+                src="/rashawear_logo_svg.svg"
+                alt="Rashawear Logo"
+                width={200}
+                height={50}
+                // in mobile i want a litte gap from top
+
+                className="rounded-full sm:pt-2"
+              />
+             
             </Link>
 
             <nav className="hidden lg:flex items-center gap-8">
